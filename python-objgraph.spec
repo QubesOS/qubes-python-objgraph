@@ -12,7 +12,9 @@ Source0:        https://files.pythonhosted.org/packages/source/o/%{pypi_name}/%{
 BuildArch:      noarch
  
 BuildRequires:  python%{python3_pkgversion}-devel
-#BuildRequires:  python3dist(graphviz)
+%if 0%{?fedora} >= 28
+BuildRequires:  python%{python3_pkgversion}-graphviz
+%endif
 BuildRequires:  graphviz
 BuildRequires:  python%{python3_pkgversion}-setuptools
 BuildRequires:  python%{python3_pkgversion}-sphinx
@@ -24,8 +26,10 @@ Python Object Graphs :target:
 Summary:        %{summary}
 %{?python_provide:%python_provide python%{python3_pkgversion}-%{pypi_name}}
  
-#Requires:       python3dist(graphviz)
-Requires:       graphviz
+%if 0%{?fedora} >= 28
+Requires:       python%{python3_pkgversion}-graphviz
+%endif
+Requires:		graphviz
 %description -n python%{python3_pkgversion}-%{pypi_name}
 Python Object Graphs :target:
 
@@ -50,7 +54,9 @@ rm -rf html/.{doctrees,buildinfo}
 %py3_install
 
 %check
+%if 0%{?fedora} >= 28
 %{__python3} setup.py test
+%endif
 
 %files -n python%{python3_pkgversion}-%{pypi_name}
 %license LICENSE
