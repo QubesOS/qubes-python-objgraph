@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        3.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Draws Python object reference graphs with graphviz
 
 License:        MIT
