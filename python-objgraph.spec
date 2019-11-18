@@ -2,8 +2,8 @@
 %global pypi_name objgraph
 
 Name:           python-%{pypi_name}
-Version:        3.4.0
-Release:        3%{?dist}
+Version:        3.4.1
+Release:        2%{?dist}
 Summary:        Draws Python object reference graphs with graphviz
 
 License:        MIT
