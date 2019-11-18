@@ -18,6 +18,7 @@ BuildRequires:  python%{python3_pkgversion}-graphviz
 BuildRequires:  graphviz
 BuildRequires:  python%{python3_pkgversion}-setuptools
 BuildRequires:  python%{python3_pkgversion}-sphinx
+BuildRequires:  python%{python3_pkgversion}-mock
 
 %description
 Python Object Graphs :target:
