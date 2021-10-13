@@ -2,7 +2,7 @@
 %global pypi_name objgraph
 
 Name:           python-%{pypi_name}
-Version:        3.4.1
+Version:        3.5.0
 Release:        2%{?dist}
 Summary:        Draws Python object reference graphs with graphviz
 
@@ -18,7 +18,8 @@ BuildRequires:  python%{python3_pkgversion}-graphviz
 BuildRequires:  graphviz
 BuildRequires:  python%{python3_pkgversion}-setuptools
 BuildRequires:  python%{python3_pkgversion}-sphinx
-BuildRequires:  python%{python3_pkgversion}-mock
+
+Patch1: 0001-Back-to-development-3.5.1.patch
 
 %description
 Python Object Graphs :target:
@@ -40,7 +41,7 @@ Summary:        objgraph documentation
 Documentation for objgraph
 
 %prep
-%autosetup -n %{pypi_name}-%{version}
+%autosetup -n %{pypi_name}-%{version} -p1
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
@@ -64,7 +65,7 @@ rm -rf html/.{doctrees,buildinfo}
 %doc README.rst
 %{python3_sitelib}/__pycache__/*
 %{python3_sitelib}/%{pypi_name}.py
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python3_sitelib}/%{pypi_name}-%{version}-py*.egg-info
 
 %files -n python-%{pypi_name}-doc
 %doc html
