@@ -29,7 +29,9 @@ Python Object Graphs :target:
 Summary:        %{summary}
 %{?python_provide:%python_provide python%{python3_pkgversion}-%{pypi_name}}
  
+%if 0%{?fedora} >= 28
 Requires:       python%{python3_pkgversion}-graphviz
+%endif
 Requires:       graphviz
 %description -n python%{python3_pkgversion}-%{pypi_name}
 Python Object Graphs :target:
