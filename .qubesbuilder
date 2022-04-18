@@ -1,0 +1,12 @@
+host:
+  rpm:
+    spec:
+    - python-objgraph.spec
+vm:
+  rpm:
+    spec:
+    - python-objgraph.spec
+source:
+  files:
+  - url: https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+    sha256: objgraph-3.5.0.tar.gz.sha256
