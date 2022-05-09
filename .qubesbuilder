@@ -1,10 +1,10 @@
 host:
   rpm:
-    spec:
+    build:
     - python-objgraph.spec
 vm:
   rpm:
-    spec:
+    build:
     - python-objgraph.spec
 source:
   files:
