@@ -1,4 +1,4 @@
-VERSION := 3.5.0
+VERSION := $(file <version)
 URL := https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-$(VERSION).tar.gz
 SRC_FILE = $(notdir $(URL))
 UNTRUSTED_SUFF := .UNTRUSTED

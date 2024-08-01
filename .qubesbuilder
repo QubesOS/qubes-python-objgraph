@@ -8,5 +8,5 @@ vm:
     - python-objgraph.spec
 source:
   files:
-  - url: https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
-    sha256: objgraph-3.5.0.tar.gz.sha256
+  - url: https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-@VERSION@.tar.gz
+    sha256: objgraph-@VERSION@.tar.gz.sha256
