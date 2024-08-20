@@ -50,8 +50,12 @@ rm -rf html/.{doctrees,buildinfo}
 %install
 %py3_install
 
+%if 0%{?fedora} < 41
+# disable tests on F41 for now:
+# https://github.com/mgedmin/objgraph/issues/80
 %check
 %{__python3} setup.py test
+%endif
 
 %files -n python%{python3_pkgversion}-%{pypi_name}
 %license LICENSE
