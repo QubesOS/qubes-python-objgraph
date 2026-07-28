@@ -13,7 +13,6 @@ BuildArch:      noarch
  
 BuildRequires:  python%{python3_pkgversion}-devel
 BuildRequires:  python%{python3_pkgversion}-graphviz
-BuildRequires:  python%{python3_pkgversion}-mock
 BuildRequires:  graphviz
 BuildRequires:  python%{python3_pkgversion}-setuptools
 BuildRequires:  python%{python3_pkgversion}-sphinx
